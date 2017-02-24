@@ -4,3 +4,9 @@
 <template-binding></template-binding>
 <br>
 <two-way-binding></two-way-binding>
+<br>
+<observable-events></observable-events>
+<br>
+<input type="text" value="0" placeholder="Enter temperature" [(ngModel)]="temp">
+<button (click)="toggleFormat()">Toggle Format</button>
+<br>In {{ targetFormat }} this temperature is {{ temp | temperature: format | number: '1.1-2' }}
